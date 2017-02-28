@@ -1,7 +1,7 @@
 {
   "name": "botkit-karma-simple",
   "description": "increment things",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bugs": {
     "url": "https://github.com/9renpoto/botkit-karma-simple/issues"
   },

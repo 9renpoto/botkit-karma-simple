@@ -1,7 +1,8 @@
 {
   "name": "botkit-karma-simple",
   "description": "increment things",
-  "version": "0.0.2",
+  "version": "0.1.0",
+  "author": "@9renpoto",
   "bugs": {
     "url": "https://github.com/9renpoto/botkit-karma-simple/issues"
   },
@@ -20,6 +21,9 @@
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://github.com/9renpoto/botkit-karma-simple#readme",
   "keywords": [
     "karma"
@@ -29,20 +33,17 @@
   "peerDependencies": {
     "botkit": "^0.5.1"
   },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/9renpoto/botkit-karma-simple.git"
   },
   "scripts": {
-    "prepublish": "npm run build",
     "build": "babel src -d lib",
     "clean": "rimraf lib coverage",
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
+    "prepublish": "npm run build",
     "start": "npm run build && node example/index.js",
     "test": "npm run lint"
   }

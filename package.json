@@ -1,0 +1,49 @@
+{
+  "name": "botkit-karma-simple",
+  "description": "increment things",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/9renpoto/botkit-karma-simple/issues"
+  },
+  "dependencies": {
+    "karma-store-redis": "^0.0.1"
+  },
+  "devDependencies": {
+    "@9renpoto/eslint-config-flowtype": "^0.1.1",
+    "babel-cli": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "botkit": "^0.5.1",
+    "eslint": "^3.16.1",
+    "flow-bin": "^0.40.0",
+    "npm-run-all": "^4.0.2",
+    "rimraf": "^2.6.1"
+  },
+  "homepage": "https://github.com/9renpoto/botkit-karma-simple#readme",
+  "keywords": [
+    "karma"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "peerDependencies": {
+    "botkit": "^0.5.1"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/9renpoto/botkit-karma-simple.git"
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src -d lib",
+    "clean": "rimraf lib coverage",
+    "lint": "npm-run-all -p lint:*",
+    "lint:flow": "flow",
+    "lint:js": "eslint . --cache",
+    "start": "npm run build && node example/index.js",
+    "test": "npm run lint"
+  }
+}

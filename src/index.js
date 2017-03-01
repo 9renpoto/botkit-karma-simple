@@ -52,7 +52,7 @@ export default class KarmaBot {
       this._store.top(10, (top: string[]) => {
         const response = [`The Best:`]
         for (let i = 0; i < top.length; i += 2) {
-          response.push(`${format((i / 2 + 1).toString())}. ${this.thingWrapper(top[i])}: ${top[i + 1]}`)
+          response.push(`${format((i / 2 + 1).toString())}. ${top[i]}: ${top[i + 1]}`)
         }
         bot.reply(msg, response.join('\n'))
       })

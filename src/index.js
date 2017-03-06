@@ -29,7 +29,7 @@ export default class KarmaBot {
   thingWrapper (thing: string) {
     return thing
   }
-  _plus () {
+  plus () {
     this._ctrl.hears(['([^+\\s])\\+\\+(\\s|$)'], ['ambient'], (bot, msg) => {
       const thing = this.thingWrapper(msg.text.match(/@?(\S+[^+\s])\+\+(\s|$)/)[1].toLowerCase())
       const n = 1
@@ -38,7 +38,7 @@ export default class KarmaBot {
       })
     })
   }
-  _minus () {
+  minus () {
     this._ctrl.hears(['([^-\s])--(\s|$)'], ['ambient'], (bot, msg) => {  // eslint-disable-line no-useless-escape
       const thing = this.thingWrapper(msg.text.match(/@?(\S+[^-\s])--(\s|$)/)[1].toLowerCase())
       const n = 1
@@ -47,20 +47,20 @@ export default class KarmaBot {
       })
     })
   }
-  _showTop () {
+  showTop (cnt: number = 10) {
     this._ctrl.hears('karma best', ['direct_mention', 'mention'], (bot, msg) => {
-      this._store.top(10, (top: string[]) => {
+      this._store.top(cnt, (top: string[]) => {
         const response = [`The Best:`]
         for (let i = 0; i < top.length; i += 2) {
-          response.push(`${format((i / 2 + 1).toString())}. ${top[i]}: ${top[i + 1]}`)
+          response.push(`${format(((i / 2) + 1).toString())}. ${top[i]}: ${top[i + 1]}`)
         }
         bot.reply(msg, response.join('\n'))
       })
     })
   }
   listen () {
-    this._plus()
-    this._minus()
-    this._showTop()
+    this.plus()
+    this.minus()
+    this.showTop()
   }
 }

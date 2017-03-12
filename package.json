@@ -16,6 +16,8 @@
     "babel-preset-flow": "^6.23.0",
     "babel-register": "^6.23.0",
     "botkit": "^0.5.1",
+    "esdoc": "^0.5.2",
+    "esdoc-flow-plugin": "^1.0.0",
     "eslint": "^3.16.1",
     "flow-bin": "^0.41.0",
     "npm-run-all": "^4.0.2",
@@ -38,13 +40,13 @@
     "url": "git+ssh://git@github.com/9renpoto/botkit-karma-simple.git"
   },
   "scripts": {
-    "build": "babel src -d lib",
+    "build": "babel src -d lib && esdoc",
     "clean": "rimraf lib coverage",
     "lint": "npm-run-all -p lint:*",
     "lint:flow": "flow",
     "lint:js": "eslint . --cache",
     "prepublish": "npm run build",
     "start": "npm run build && node example/index.js",
-    "test": "npm run lint"
+    "test": "npm run lint && npm run build"
   }
 }

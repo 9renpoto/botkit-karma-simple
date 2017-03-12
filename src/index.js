@@ -5,6 +5,12 @@ type Controller = {
   hears: Function
 }
 
+/**
+ * number formatter
+ * @param  {String} data - number of string
+ * @param  {Number} [length=2] - max digits, ex. 2 when 99
+ * @return {string} 099 when length 3 data 99
+ */
 function format (data: string, length = 2): string {
   if (data.length === length) {
     return data
@@ -19,6 +25,9 @@ function format (data: string, length = 2): string {
   return data
 }
 
+/**
+ * This is KarmaBot
+ */
 export default class KarmaBot {
   _store: KarmaStore
   _ctrl: Controller
@@ -26,10 +35,19 @@ export default class KarmaBot {
     this._ctrl = ctrl
     this._store = new KarmaStore(storeName)
   }
-  thingWrapper (thing: string) {
+  /**
+   * karma wrapper
+   * @param {String} thing default
+   * @returns {String} return default, please override this method
+   */
+  thingWrapper (thing: string): string {
     return thing
   }
-  plus () {
+  /**
+   * hears ++ things
+   * @returns {void}
+   */
+  plus (): void {
     this._ctrl.hears(['([^+\\s])\\+\\+(\\s|$)'], ['ambient'], (bot, msg) => {
       const thing = this.thingWrapper(msg.text.match(/@?(\S+[^+\s])\+\+(\s|$)/)[1].toLowerCase())
       const n = 1
@@ -38,7 +56,11 @@ export default class KarmaBot {
       })
     })
   }
-  minus () {
+  /**
+   * hears -- things
+   * @return {void}
+   */
+  minus (): void {
     this._ctrl.hears(['([^-\s])--(\s|$)'], ['ambient'], (bot, msg) => {  // eslint-disable-line no-useless-escape
       const thing = this.thingWrapper(msg.text.match(/@?(\S+[^-\s])--(\s|$)/)[1].toLowerCase())
       const n = 1
@@ -47,7 +69,12 @@ export default class KarmaBot {
       })
     })
   }
-  showTop (cnt: number = 10) {
+  /**
+   * show stored karma top best
+   * @param {number} cnt show count
+   * @return {void}
+   */
+  showTop (cnt: number = 10): void {
     this._ctrl.hears('karma best', ['direct_mention', 'mention'], (bot, msg) => {
       this._store.top(cnt, (top: string[]) => {
         const response = [`The Best:`]
@@ -58,7 +85,11 @@ export default class KarmaBot {
       })
     })
   }
-  listen () {
+  /**
+   * listen all hears
+   * @return {void}
+   */
+  listen (): void {
     this.plus()
     this.minus()
     this.showTop()

@@ -49,7 +49,7 @@ export default class KarmaBot {
    */
   plus (): void {
     this._ctrl.hears(['([^+\\s])\\+\\+(\\s|$)'], ['ambient'], (bot, msg) => {
-      const thing = this.thingWrapper(msg.text.match(/@?(\S+[^+\s])\+\+(\s|$)/)[1].toLowerCase())
+      const thing = this.thingWrapper(msg.text.match(/(\S+[^+\s])\+\+(\s|$)/)[1].toLowerCase())
       const n = 1
       this._store.up(thing, n, karma => {
         bot.reply(msg, `level up! ${thing}: +${n} (Karma: ${karma})`)
@@ -62,7 +62,7 @@ export default class KarmaBot {
    */
   minus (): void {
     this._ctrl.hears(['([^-\s])--(\s|$)'], ['ambient'], (bot, msg) => {  // eslint-disable-line no-useless-escape
-      const thing = this.thingWrapper(msg.text.match(/@?(\S+[^-\s])--(\s|$)/)[1].toLowerCase())
+      const thing = this.thingWrapper(msg.text.match(/(\S+[^-\s])--(\s|$)/)[1].toLowerCase())
       const n = 1
       this._store.down(thing, n, karma => {
         bot.reply(msg, `oops! ${thing}: -${n} (Karma: ${karma})`)

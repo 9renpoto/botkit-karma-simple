@@ -10,7 +10,7 @@
     "karma-store-redis": "^0.1.1"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config-flowtype": "^0.2.1",
+    "@9renpoto/eslint-config-flowtype": "^0.3.0",
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "babel-preset-flow": "^6.23.0",

@@ -3,7 +3,7 @@ import KarmaStore from 'karma-store-redis'
 
 type Controller = {
   hears: Function
-};
+}
 
 /**
  * number formatter
@@ -29,8 +29,8 @@ function format (data: string, length = 2): string {
  * This is KarmaBot
  */
 export default class KarmaBot {
-  _store: KarmaStore;
-  _ctrl: Controller;
+  _store: KarmaStore
+  _ctrl: Controller
   constructor (ctrl: Controller, storeName: string = 'karmastore') {
     this._ctrl = ctrl
     this._store = new KarmaStore(storeName)
@@ -79,7 +79,7 @@ export default class KarmaBot {
    * @param {number} cnt show count
    * @return {void}
    */
-  showTop (cnt: number = 10): void {
+  showTop (cnt: number = 5): void {
     this._ctrl.hears(
       'karma best',
       ['direct_mention', 'mention'],
@@ -97,6 +97,28 @@ export default class KarmaBot {
     )
   }
   /**
+   * show sorted karma worst
+   * @param {number} cnt show count
+   * @return {void}
+   */
+  showWorst (cnt: number = 5): void {
+    this._ctrl.hears(
+      'karma worst',
+      ['direct_mention', 'mention'],
+      (bot, msg) => {
+        this._store.lowest(cnt, (worst: string[]) => {
+          const response = [`The Worst:`]
+          for (let i = 0; i < worst.length; i += 2) {
+            response.push(
+              `${format((i / 2 + 1).toString())}. ${worst[i]}: ${worst[i + 1]}`
+            )
+          }
+          bot.reply(msg, response.join('\n'))
+        })
+      }
+    )
+  }
+  /**
    * listen all hears
    * @return {void}
    */
@@ -104,5 +126,6 @@ export default class KarmaBot {
     this.plus()
     this.minus()
     this.showTop()
+    this.showWorst()
   }
 }

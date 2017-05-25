@@ -25,9 +25,16 @@ function format (data: string, length = 2): string {
   return data
 }
 
-/**
- * This is KarmaBot
- */
+function formatRank (firstMsg: string, data: string[]): string[] {
+  const response = [firstMsg]
+  for (let i = 0; i < data.length; i += 2) {
+    response.push(
+      `${format((i / 2 + 1).toString())}. ${data[i]}: ${data[i + 1]}`
+    )
+  }
+  return response
+}
+
 export default class KarmaBot {
   _store: KarmaStore
   _ctrl: Controller
@@ -85,13 +92,7 @@ export default class KarmaBot {
       ['direct_mention', 'mention'],
       (bot, msg) => {
         this._store.top(cnt, (top: string[]) => {
-          const response = [`The Best:`]
-          for (let i = 0; i < top.length; i += 2) {
-            response.push(
-              `${format((i / 2 + 1).toString())}. ${top[i]}: ${top[i + 1]}`
-            )
-          }
-          bot.reply(msg, response.join('\n'))
+          bot.reply(msg, formatRank(`The Best:`, top).join('\n'))
         })
       }
     )
@@ -107,13 +108,7 @@ export default class KarmaBot {
       ['direct_mention', 'mention'],
       (bot, msg) => {
         this._store.lowest(cnt, (worst: string[]) => {
-          const response = [`The Worst:`]
-          for (let i = 0; i < worst.length; i += 2) {
-            response.push(
-              `${format((i / 2 + 1).toString())}. ${worst[i]}: ${worst[i + 1]}`
-            )
-          }
-          bot.reply(msg, response.join('\n'))
+          bot.reply(msg, formatRank(`The Worst:`, worst).join('\n'))
         })
       }
     )

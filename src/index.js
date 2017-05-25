@@ -3,7 +3,7 @@ import KarmaStore from 'karma-store-redis'
 
 type Controller = {
   hears: Function
-};
+}
 
 /**
  * number formatter
@@ -25,12 +25,19 @@ function format (data: string, length = 2): string {
   return data
 }
 
-/**
- * This is KarmaBot
- */
+function formatRank (firstMsg: string, data: string[]): string[] {
+  const response = [firstMsg]
+  for (let i = 0; i < data.length; i += 2) {
+    response.push(
+      `${format((i / 2 + 1).toString())}. ${data[i]}: ${data[i + 1]}`
+    )
+  }
+  return response
+}
+
 export default class KarmaBot {
-  _store: KarmaStore;
-  _ctrl: Controller;
+  _store: KarmaStore
+  _ctrl: Controller
   constructor (ctrl: Controller, storeName: string = 'karmastore') {
     this._ctrl = ctrl
     this._store = new KarmaStore(storeName)
@@ -79,19 +86,29 @@ export default class KarmaBot {
    * @param {number} cnt show count
    * @return {void}
    */
-  showTop (cnt: number = 10): void {
+  showTop (cnt: number = 5): void {
     this._ctrl.hears(
       'karma best',
       ['direct_mention', 'mention'],
       (bot, msg) => {
         this._store.top(cnt, (top: string[]) => {
-          const response = [`The Best:`]
-          for (let i = 0; i < top.length; i += 2) {
-            response.push(
-              `${format((i / 2 + 1).toString())}. ${top[i]}: ${top[i + 1]}`
-            )
-          }
-          bot.reply(msg, response.join('\n'))
+          bot.reply(msg, formatRank(`The Best:`, top).join('\n'))
+        })
+      }
+    )
+  }
+  /**
+   * show sorted karma worst
+   * @param {number} cnt show count
+   * @return {void}
+   */
+  showWorst (cnt: number = 5): void {
+    this._ctrl.hears(
+      'karma worst',
+      ['direct_mention', 'mention'],
+      (bot, msg) => {
+        this._store.lowest(cnt, (worst: string[]) => {
+          bot.reply(msg, formatRank(`The Worst:`, worst).join('\n'))
         })
       }
     )
@@ -104,5 +121,6 @@ export default class KarmaBot {
     this.plus()
     this.minus()
     this.showTop()
+    this.showWorst()
   }
 }

@@ -1,0 +1,351 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "/* @flow */\nimport KarmaStore from 'karma-store-redis'\n\ntype Controller = {\n  hears: Function\n}\n\nfunction format (data: string, length = 2): string {\n  if (data.length === length) {\n    return data\n  }\n\n  if (data.length < length) {\n    length -= data.length\n    for (let i = 0; i < length; i++) {\n      data = '0' + data\n    }\n  }\n  return data\n}\n\nfunction formatRank (firstMsg: string, data: string[]): string[] {\n  const response = [firstMsg]\n  for (let i = 0; i < data.length; i += 2) {\n    response.push(\n      `${format((i / 2 + 1).toString())}. ${data[i]}: ${data[i + 1]}`\n    )\n  }\n  return response\n}\n\nexport default class KarmaBot {\n  _store: KarmaStore\n  _ctrl: Controller\n  constructor (ctrl: Controller, storeName: string = 'karmastore') {\n    this._ctrl = ctrl\n    this._store = new KarmaStore(storeName)\n  }\n  thingWrapper (thing: string): string {\n    return thing\n  }\n  plus (): void {\n    this._ctrl.hears(['([^+\\\\s])\\\\+\\\\+(\\\\s|$)'], ['ambient'], (bot, msg) => {\n      const thing = this.thingWrapper(\n        msg.text.match(/(\\S+[^+\\s])\\+\\+(\\s|$)/)[1].toLowerCase()\n      )\n      const n = 1\n      this._store.up(thing, n, karma => {\n        bot.reply(msg, `level up! ${thing}: +${n} (Karma: ${karma})`)\n      })\n    })\n  }\n  minus (): void {\n    this._ctrl.hears(['([^-s])--(s|$)'], ['ambient'], (bot, msg) => {\n      const thing = this.thingWrapper(\n        msg.text.match(/(\\S+[^-\\s])--(\\s|$)/)[1].toLowerCase()\n      )\n      const n = 1\n      this._store.down(thing, n, karma => {\n        bot.reply(msg, `oops! ${thing}: -${n} (Karma: ${karma})`)\n      })\n    })\n  }\n  showTop (cnt: number = 5): void {\n    this._ctrl.hears(\n      'karma best',\n      ['direct_mention', 'mention'],\n      (bot, msg) => {\n        this._store.top(cnt, (top: string[]) => {\n          bot.reply(msg, formatRank(`The Best:`, top).join('\\n'))\n        })\n      }\n    )\n  }\n  showWorst (cnt: number = 5): void {\n    this._ctrl.hears(\n      'karma worst',\n      ['direct_mention', 'mention'],\n      (bot, msg) => {\n        this._store.lowest(cnt, (worst: string[]) => {\n          bot.reply(msg, formatRank(`The Worst:`, worst).join('\\n'))\n        })\n      }\n    )\n  }\n  listen (): void {\n    this.plus()\n    this.minus()\n    this.showTop()\n    this.showWorst()\n  }\n}\n",
+    "static": true,
+    "longname": "/Users/9renpoto/src/github.com/9renpoto/botkit-karma-simple/src/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "function",
+    "name": "format",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~format",
+    "access": null,
+    "export": false,
+    "importPath": "botkit-karma-simple/src/index.js",
+    "importStyle": null,
+    "description": " ",
+    "lineNumber": 8,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "undefined",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "function",
+    "name": "formatRank",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~formatRank",
+    "access": null,
+    "export": false,
+    "importPath": "botkit-karma-simple/src/index.js",
+    "importStyle": null,
+    "description": " ",
+    "lineNumber": 22,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "firstMsg",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "array"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "class",
+    "name": "KarmaBot",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~KarmaBot",
+    "access": null,
+    "export": true,
+    "importPath": "botkit-karma-simple/src/index.js",
+    "importStyle": "KarmaBot",
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 4,
+    "kind": "member",
+    "name": "_store",
+    "memberof": "src/index.js~KarmaBot",
+    "static": false,
+    "longname": "src/index.js~KarmaBot#_store",
+    "access": null,
+    "description": "",
+    "lineNumber": 33,
+    "type": {
+      "nullable": null,
+      "types": [
+        "KarmaStore"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "member",
+    "name": "_ctrl",
+    "memberof": "src/index.js~KarmaBot",
+    "static": false,
+    "longname": "src/index.js~KarmaBot#_ctrl",
+    "access": null,
+    "description": "",
+    "lineNumber": 34,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Controller"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "method",
+    "name": "thingWrapper",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#thingWrapper",
+    "access": null,
+    "description": " ",
+    "lineNumber": 39,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "thing",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "method",
+    "name": "plus",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#plus",
+    "access": null,
+    "description": " ",
+    "lineNumber": 42,
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "method",
+    "name": "minus",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#minus",
+    "access": null,
+    "description": " ",
+    "lineNumber": 53,
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "method",
+    "name": "showTop",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#showTop",
+    "access": null,
+    "description": " ",
+    "lineNumber": 64,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "undefined",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "method",
+    "name": "showWorst",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#showWorst",
+    "access": null,
+    "description": " ",
+    "lineNumber": 75,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "undefined",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 14,
+    "kind": "method",
+    "name": "listen",
+    "memberof": "src/index.js~KarmaBot",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~KarmaBot#listen",
+    "access": null,
+    "description": " ",
+    "lineNumber": 86,
+    "return": {
+      "nullable": null,
+      "types": [
+        "void"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# botkit-karma-simple\n\nbotkit++\n\n[![npm version](https://badge.fury.io/js/botkit-karma-simple.svg)](https://badge.fury.io/js/botkit-karma-simple) \n[![Build Status](https://travis-ci.org/9renpoto/botkit-karma-simple.svg?branch=master)](https://travis-ci.org/9renpoto/botkit-karma-simple) \n[![dependencies Status](https://david-dm.org/9renpoto/botkit-karma-simple/status.svg)](https://david-dm.org/9renpoto/botkit-karma-simple) \n[![devDependencies Status](https://david-dm.org/9renpoto/botkit-karma-simple/dev-status.svg)](https://david-dm.org/9renpoto/botkit-karma-simple?type=dev) \n[![peerDependencies Status](https://david-dm.org/9renpoto/botkit-karma-simple/peer-status.svg)](https://david-dm.org/9renpoto/botkit-karma-simple?type=peer) \n[![Greenkeeper badge](https://badges.greenkeeper.io/9renpoto/botkit-karma-simple.svg)](https://greenkeeper.io/)\n[![document](https://9renpoto.github.io/botkit-karma-simple/badge.svg)](https://9renpoto.github.io/botkit-karma-simple/)\n\n## Install\n\n```sh\nnpm install botkit-karma-simple --save\n```\n\n## License\n\nMIT\n",
+    "longname": "/Users/9renpoto/src/github.com/9renpoto/botkit-karma-simple/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"botkit-karma-simple\",\n  \"description\": \"increment things\",\n  \"version\": \"0.2.0\",\n  \"author\": \"@9renpoto\",\n  \"bugs\": {\n    \"url\": \"https://github.com/9renpoto/botkit-karma-simple/issues\"\n  },\n  \"dependencies\": {\n    \"karma-store-redis\": \"^0.2.0\"\n  },\n  \"devDependencies\": {\n    \"@9renpoto/eslint-config-flowtype\": \"^0.6.0\",\n    \"babel-cli\": \"^6.24.1\",\n    \"babel-preset-env\": \"^1.5.1\",\n    \"babel-preset-flow\": \"^6.23.0\",\n    \"babel-register\": \"^6.24.1\",\n    \"botkit\": \"^0.6.0\",\n    \"esdoc\": \"^1.0.1\",\n    \"esdoc-flow-type-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.5.0\",\n    \"flow-bin\": \"^0.54.0\",\n    \"gh-pages\": \"^1.0.0\",\n    \"husky\": \"^0.14.3\",\n    \"lint-staged\": \"^4.0.4\",\n    \"npm-run-all\": \"^4.0.2\",\n    \"prettier-eslint-cli\": \"^4.2.1\",\n    \"rimraf\": \"^2.6.1\"\n  },\n  \"files\": [\n    \"lib\"\n  ],\n  \"homepage\": \"https://github.com/9renpoto/botkit-karma-simple#readme\",\n  \"keywords\": [\n    \"karma\"\n  ],\n  \"license\": \"MIT\",\n  \"lint-staged\": {\n    \"*.js\": [\n      \"prettier-eslint --write\",\n      \"eslint --cache\",\n      \"git add\"\n    ]\n  },\n  \"main\": \"lib/index.js\",\n  \"peerDependencies\": {\n    \"botkit\": \"^0.5.1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+ssh://git@github.com/9renpoto/botkit-karma-simple.git\"\n  },\n  \"scripts\": {\n    \"build\": \"babel src -d lib && esdoc\",\n    \"clean\": \"rimraf lib coverage\",\n    \"deploy\": \"gh-pages -d doc\",\n    \"lint\": \"run-p lint:*\",\n    \"lint:flow\": \"flow\",\n    \"lint:js\": \"eslint . --cache\",\n    \"postpublish\": \"npm run deploy\",\n    \"precommit\": \"lint-staged\",\n    \"prepublish\": \"npm run build\",\n    \"start\": \"npm run build && node example/slack.js\",\n    \"test\": \"npm run lint && npm run build\"\n  }\n}\n",
+    "longname": "/Users/9renpoto/src/github.com/9renpoto/botkit-karma-simple/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

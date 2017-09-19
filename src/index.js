@@ -5,12 +5,6 @@ type Controller = {
   hears: Function
 }
 
-/**
- * number formatter
- * @param  {String} data - number of string
- * @param  {Number} [length=2] - max digits, ex. 2 when 99
- * @return {string} 099 when length 3 data 99
- */
 function format (data: string, length = 2): string {
   if (data.length === length) {
     return data
@@ -42,18 +36,9 @@ export default class KarmaBot {
     this._ctrl = ctrl
     this._store = new KarmaStore(storeName)
   }
-  /**
-   * karma wrapper
-   * @param {String} thing default
-   * @returns {String} return default, please override this method
-   */
   thingWrapper (thing: string): string {
     return thing
   }
-  /**
-   * hears ++ things
-   * @returns {void}
-   */
   plus (): void {
     this._ctrl.hears(['([^+\\s])\\+\\+(\\s|$)'], ['ambient'], (bot, msg) => {
       const thing = this.thingWrapper(
@@ -65,13 +50,8 @@ export default class KarmaBot {
       })
     })
   }
-  /**
-   * hears -- things
-   * @return {void}
-   */
   minus (): void {
-    // eslint-disable-next-line no-useless-escape
-    this._ctrl.hears(['([^-\s])--(\s|$)'], ['ambient'], (bot, msg) => {
+    this._ctrl.hears(['([^-s])--(s|$)'], ['ambient'], (bot, msg) => {
       const thing = this.thingWrapper(
         msg.text.match(/(\S+[^-\s])--(\s|$)/)[1].toLowerCase()
       )
@@ -81,11 +61,6 @@ export default class KarmaBot {
       })
     })
   }
-  /**
-   * show stored karma top best
-   * @param {number} cnt show count
-   * @return {void}
-   */
   showTop (cnt: number = 5): void {
     this._ctrl.hears(
       'karma best',
@@ -97,11 +72,6 @@ export default class KarmaBot {
       }
     )
   }
-  /**
-   * show sorted karma worst
-   * @param {number} cnt show count
-   * @return {void}
-   */
   showWorst (cnt: number = 5): void {
     this._ctrl.hears(
       'karma worst',
@@ -113,10 +83,6 @@ export default class KarmaBot {
       }
     )
   }
-  /**
-   * listen all hears
-   * @return {void}
-   */
   listen (): void {
     this.plus()
     this.minus()

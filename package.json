@@ -19,7 +19,7 @@
     "esdoc": "^1.0.1",
     "esdoc-flow-type-plugin": "^1.0.0",
     "eslint": "^4.5.0",
-    "flow-bin": "^0.55.0",
+    "flow-bin": "^0.56.0",
     "gh-pages": "^1.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.4",

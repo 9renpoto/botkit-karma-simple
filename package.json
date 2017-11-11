@@ -22,7 +22,7 @@
     "flow-bin": "^0.59.0",
     "gh-pages": "^1.0.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.4",
+    "lint-staged": "^5.0.0",
     "npm-run-all": "^4.0.2",
     "prettier-eslint-cli": "^4.2.1",
     "rimraf": "^2.6.1"

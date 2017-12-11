@@ -23,7 +23,7 @@
     "gh-pages": "^1.0.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
-    "npm-run-all": "^4.0.2",
+    "npm-run-all": "^4.1.2",
     "prettier-eslint-cli": "^4.2.1",
     "rimraf": "^2.6.2"
   },

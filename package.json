@@ -10,20 +10,21 @@
     "karma-store-redis": "^0.2.0"
   },
   "devDependencies": {
-    "@9renpoto/eslint-config-flowtype": "^0.6.0",
-    "babel-cli": "^6.24.1",
+    "@9renpoto/eslint-config-flowtype": "^3.0.0-beta1",
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.24.1",
+    "babel-register": "^6.26.0",
     "botkit": "^0.6.9",
     "esdoc": "^1.0.4",
-    "esdoc-flow-type-plugin": "^1.0.0",
+    "esdoc-flow-type-plugin": "^1.0.1",
     "eslint": "^4.17.0",
     "flow-bin": "^0.64.0",
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "npm-run-all": "^4.1.2",
+    "prettier": "^1.10.2",
     "prettier-eslint-cli": "^4.7.0",
     "rimraf": "^2.6.2"
   },
@@ -40,11 +41,15 @@
       "prettier-eslint --write",
       "eslint --cache",
       "git add"
+    ],
+    "*.md": [
+      "prettier --write --parser markdown",
+      "git add"
     ]
   },
   "main": "lib/index.js",
   "peerDependencies": {
-    "botkit": "^0.5.1"
+    "botkit": "^0.6.x"
   },
   "repository": {
     "type": "git",

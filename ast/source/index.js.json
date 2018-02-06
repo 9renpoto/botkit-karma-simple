@@ -402,7 +402,8 @@
                 "column": 50
               }
             }
-          }
+          },
+          "predicate": null
         },
         "body": {
           "type": "BlockStatement",
@@ -1301,7 +1302,8 @@
                 }
               }
             }
-          }
+          },
+          "predicate": null
         },
         "body": {
           "type": "BlockStatement",
@@ -2251,6 +2253,7 @@
                     "column": 20
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -2270,7 +2273,6 @@
                   "name": "_store"
                 },
                 "variance": null,
-                "static": false,
                 "typeAnnotation": {
                   "type": "TypeAnnotation",
                   "start": 651,
@@ -2341,6 +2343,7 @@
                     "column": 19
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -2360,7 +2363,6 @@
                   "name": "_ctrl"
                 },
                 "variance": null,
-                "static": false,
                 "typeAnnotation": {
                   "type": "TypeAnnotation",
                   "start": 671,
@@ -2431,6 +2433,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -2449,7 +2452,6 @@
                   },
                   "name": "constructor"
                 },
-                "static": false,
                 "kind": "constructor",
                 "id": null,
                 "generator": false,
@@ -2863,6 +2865,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -2881,7 +2884,6 @@
                   },
                   "name": "thingWrapper"
                 },
-                "static": false,
                 "kind": "method",
                 "id": null,
                 "generator": false,
@@ -2964,7 +2966,8 @@
                         "column": 38
                       }
                     }
-                  }
+                  },
+                  "predicate": null
                 },
                 "body": {
                   "type": "BlockStatement",
@@ -3037,6 +3040,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -3055,7 +3059,6 @@
                   },
                   "name": "plus"
                 },
-                "static": false,
                 "kind": "method",
                 "id": null,
                 "generator": false,
@@ -3090,7 +3093,8 @@
                         "column": 15
                       }
                     }
-                  }
+                  },
+                  "predicate": null
                 },
                 "body": {
                   "type": "BlockStatement",
@@ -4233,6 +4237,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -4251,7 +4256,6 @@
                   },
                   "name": "minus"
                 },
-                "static": false,
                 "kind": "method",
                 "id": null,
                 "generator": false,
@@ -4286,7 +4290,8 @@
                         "column": 16
                       }
                     }
-                  }
+                  },
+                  "predicate": null
                 },
                 "body": {
                   "type": "BlockStatement",
@@ -5429,6 +5434,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -5447,7 +5453,6 @@
                   },
                   "name": "showTop"
                 },
-                "static": false,
                 "kind": "method",
                 "id": null,
                 "generator": false,
@@ -5565,7 +5570,8 @@
                         "column": 33
                       }
                     }
-                  }
+                  },
+                  "predicate": null
                 },
                 "body": {
                   "type": "BlockStatement",
@@ -6358,6 +6364,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -6376,7 +6383,6 @@
                   },
                   "name": "showWorst"
                 },
-                "static": false,
                 "kind": "method",
                 "id": null,
                 "generator": false,
@@ -6494,7 +6500,8 @@
                         "column": 35
                       }
                     }
-                  }
+                  },
+                  "predicate": null
                 },
                 "body": {
                   "type": "BlockStatement",
@@ -7287,6 +7294,7 @@
                     "column": 3
                   }
                 },
+                "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
@@ -7305,7 +7313,6 @@
                   },
                   "name": "listen"
                 },
-                "static": false,
                 "kind": "method",
                 "id": null,
                 "generator": false,
@@ -7340,7 +7347,8 @@
                         "column": 17
                       }
                     }
-                  }
+                  },
+                  "predicate": null
                 },
                 "body": {
                   "type": "BlockStatement",
@@ -7732,7 +7740,7 @@
         "label": "import",
         "keyword": "import",
         "beforeExpr": false,
-        "startsExpr": false,
+        "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,

@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@9renpoto/eslint-config-flowtype@^3.0.0-beta1":
-  version "3.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-3.0.0-beta1.tgz#8f41d65aaa9364ace492f7f2c24dfcadd635ecda"
+"@9renpoto/eslint-config-flowtype@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.0.0.tgz#9b91324902bd418b6d96ae0ea2c654304dd80827"
   dependencies:
-    "@9renpoto/eslint-config" "^3.0.0-beta1"
+    "@9renpoto/eslint-config" "^4.0.0"
     babel-eslint "^8.0.2"
-    eslint-plugin-flowtype "^2.39.1"
+    eslint-plugin-flowtype "^2.43.0"
 
-"@9renpoto/eslint-config@^3.0.0-beta1":
-  version "3.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-3.0.0-beta1.tgz#5c90e7b9578d55e473a6829c4ee3d8e4318a7446"
+"@9renpoto/eslint-config@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-4.0.0.tgz#4c2a4ca8683b2719f80ff1bc120c3b1912a3cdf2"
   dependencies:
     eslint-config-standard "^10.2.1"
     eslint-plugin-import "^2.8.0"
-    eslint-plugin-node "^5.2.1"
+    eslint-plugin-node "^6.0.0"
     eslint-plugin-promise "^3.6.0"
     eslint-plugin-standard "^3.0.1"
 
@@ -1935,9 +1935,9 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-flowtype@^2.39.1:
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.42.0.tgz#7fcc98df4ed9482a22ac10ba4ca48d649c4c733a"
+eslint-plugin-flowtype@^2.43.0:
+  version "2.43.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.43.0.tgz#47cdac5f01cda53f1c3e8477f0c83fee66a1606e"
   dependencies:
     lodash "^4.15.0"
 
@@ -1956,14 +1956,14 @@ eslint-plugin-import@^2.8.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-node@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.2.1.tgz#80df3253c4d7901045ec87fa660a284e32bdca29"
+eslint-plugin-node@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-6.0.0.tgz#5ad5ee6b5346aec6cc9cde0b8619caed2c6d8f25"
   dependencies:
     ignore "^3.3.6"
     minimatch "^3.0.4"
     resolve "^1.3.3"
-    semver "5.3.0"
+    semver "^5.4.1"
 
 eslint-plugin-promise@^3.6.0:
   version "3.6.0"
@@ -4603,9 +4603,9 @@ sdp@^1.3.0:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
 
-semver@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
+semver@^5.4.1:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
 
 send@0.15.4:
   version "0.15.4"

@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@9renpoto/eslint-config-flowtype@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.0.0.tgz#9b91324902bd418b6d96ae0ea2c654304dd80827"
+"@9renpoto/eslint-config-flowtype@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.1.0.tgz#2b8eb03baeb9497c0c346403071cb6b40583e32c"
   dependencies:
     "@9renpoto/eslint-config" "^4.0.0"
     babel-eslint "^8.0.2"
-    eslint-plugin-flowtype "^2.43.0"
+    eslint-plugin-flowtype "^2.44.0"
 
 "@9renpoto/eslint-config@^4.0.0":
   version "4.0.0"
@@ -2107,9 +2107,9 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-flowtype@^2.43.0:
-  version "2.43.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.43.0.tgz#47cdac5f01cda53f1c3e8477f0c83fee66a1606e"
+eslint-plugin-flowtype@^2.44.0:
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.44.0.tgz#c0610d0018801e1fbe1eaec1c2174de1338ab4ee"
   dependencies:
     lodash "^4.15.0"
 

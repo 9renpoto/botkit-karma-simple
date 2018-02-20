@@ -18,7 +18,7 @@
     "botkit": "^0.6.11",
     "esdoc": "^1.0.4",
     "esdoc-flow-type-plugin": "^1.0.1",
-    "eslint": "^4.17.0",
+    "eslint": "^4.18.0",
     "flow-bin": "^0.65.0",
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",

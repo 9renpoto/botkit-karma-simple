@@ -2155,9 +2155,9 @@ escodegen@^1.6.1, escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.5.6"
 
-esdoc-flow-type-plugin@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/esdoc-flow-type-plugin/-/esdoc-flow-type-plugin-1.0.1.tgz#0813951c6868a728be6baadf0278e5d070851479"
+esdoc-flow-type-plugin@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/esdoc-flow-type-plugin/-/esdoc-flow-type-plugin-1.0.2.tgz#594dc5d00ef1613c213c180641ed03f1e75392ba"
 
 esdoc@1.1.0:
   version "1.1.0"

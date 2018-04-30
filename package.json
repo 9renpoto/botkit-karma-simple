@@ -17,7 +17,7 @@
     "babel-register": "6.26.0",
     "botkit": "0.6.13",
     "esdoc": "1.1.0",
-    "esdoc-flow-type-plugin": "1.0.2",
+    "esdoc-flow-type-plugin": "1.1.0",
     "eslint": "4.19.1",
     "flow-bin": "0.71.0",
     "gh-pages": "1.1.0",

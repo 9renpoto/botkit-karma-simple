@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@9renpoto/eslint-config-flowtype@4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.4.0.tgz#341991d7e889a3e0663530933b61335753abe133"
+"@9renpoto/eslint-config-flowtype@4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.5.0.tgz#bf368d4ebcd240076eb91e34fb01fb3e5f8ec635"
   dependencies:
     "@9renpoto/eslint-config" "^4.4.0"
     babel-eslint "^8.2.2"

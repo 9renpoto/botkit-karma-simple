@@ -1354,9 +1354,9 @@ botkit-studio-sdk@^1.0.8:
     promise "^7.1.1"
     request "^2.67.0"
 
-botkit@0.6.14:
-  version "0.6.14"
-  resolved "https://registry.yarnpkg.com/botkit/-/botkit-0.6.14.tgz#9ce60c22779a7c9d6f3e628ef624d0cf68493d2d"
+botkit@0.6.15:
+  version "0.6.15"
+  resolved "https://registry.yarnpkg.com/botkit/-/botkit-0.6.15.tgz#7eee64b8e8de7dc7c3daac8c6a73985cf29fc325"
   dependencies:
     async "^2.1.5"
     back "^1.0.1"
@@ -1369,7 +1369,7 @@ botkit@0.6.14:
     debug "^3.1.0"
     email-addresses "^3.0.1"
     express "^4.15.2"
-    https-proxy-agent "^2.0.0"
+    https-proxy-agent "^2.2.1"
     jfs "^0.3.0"
     localtunnel "^1.8.2"
     md5 "^2.2.1"
@@ -1875,7 +1875,7 @@ debug@2.6.8:
   dependencies:
     ms "2.0.0"
 
-debug@^2.2.0, debug@^2.3.3, debug@^2.4.1, debug@^2.6.8:
+debug@^2.2.0, debug@^2.3.3, debug@^2.6.8:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   dependencies:
@@ -3048,12 +3048,12 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-https-proxy-agent@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.1.0.tgz#1391bee7fd66aeabc0df2a1fa90f58954f43e443"
+https-proxy-agent@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
   dependencies:
     agent-base "^4.1.0"
-    debug "^2.4.1"
+    debug "^3.1.0"
 
 humanize-url@^1.0.0:
   version "1.0.1"

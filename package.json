@@ -15,7 +15,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-flow": "6.23.0",
     "babel-register": "6.26.0",
-    "botkit": "0.6.19",
+    "botkit": "0.6.20",
     "esdoc": "1.1.0",
     "esdoc-flow-type-plugin": "1.1.0",
     "eslint": "5.8.0",

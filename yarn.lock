@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@9renpoto/eslint-config-flowtype@4.6.0":
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.6.0.tgz#a3e5612fdaacdbf6b4185a55e3421d16bc32c5ea"
+"@9renpoto/eslint-config-flowtype@4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-4.7.0.tgz#23e44707529edc0bcc200f5d56d06fec7a063734"
   dependencies:
-    "@9renpoto/eslint-config" "^4.6.0"
-    babel-eslint "^9.0.0"
-    eslint-plugin-flowtype "^2.46.1"
+    "@9renpoto/eslint-config" "^4.7.0"
+    babel-eslint "^10.0.0"
+    eslint-plugin-flowtype "^3.0.0"
 
-"@9renpoto/eslint-config@^4.6.0":
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-4.6.0.tgz#5ef95d415e25a7afc646f605daa6c65e19f6e4d1"
+"@9renpoto/eslint-config@^4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-4.7.0.tgz#1d0557569bfe3b853ee563bbc32e23d4c3e2ee6a"
   dependencies:
     eslint-config-standard "^12.0.0"
     eslint-plugin-import "^2.9.0"
-    eslint-plugin-node "^7.0.0"
+    eslint-plugin-node "^8.0.0"
     eslint-plugin-promise "^4.0.0"
     eslint-plugin-standard "^4.0.0"
 
@@ -861,9 +861,9 @@ babel-core@^6.26.0:
     slash "^1.0.0"
     source-map "^0.5.6"
 
-babel-eslint@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-9.0.0.tgz#7d9445f81ed9f60aff38115f838970df9f2b6220"
+babel-eslint@^10.0.0:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.0.1.tgz#919681dc099614cd7d31d45c8908695092a1faed"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/parser" "^7.0.0"
@@ -2322,11 +2322,11 @@ eslint-plugin-es@^1.3.1:
     eslint-utils "^1.3.0"
     regexpp "^2.0.0"
 
-eslint-plugin-flowtype@^2.46.1:
-  version "2.46.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.46.1.tgz#c4f81d580cd89c82bc3a85a1ccf4ae3a915143a4"
+eslint-plugin-flowtype@^3.0.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.2.0.tgz#824364ed5940a404b91326fdb5a313a2a74760df"
   dependencies:
-    lodash "^4.15.0"
+    lodash "^4.17.10"
 
 eslint-plugin-import@^2.9.0:
   version "2.9.0"
@@ -2343,13 +2343,13 @@ eslint-plugin-import@^2.9.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-node@^7.0.0:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-7.0.1.tgz#a6e054e50199b2edd85518b89b4e7b323c9f36db"
+eslint-plugin-node@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-8.0.0.tgz#fb9e8911f4543514f154bb6a5924b599aa645568"
   dependencies:
     eslint-plugin-es "^1.3.1"
     eslint-utils "^1.3.1"
-    ignore "^4.0.2"
+    ignore "^5.0.2"
     minimatch "^3.0.4"
     resolve "^1.8.1"
     semver "^5.5.0"
@@ -3354,9 +3354,13 @@ ignore@^3.2.7, ignore@^3.3.3:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
-ignore@^4.0.2, ignore@^4.0.6:
+ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
+
+ignore@^5.0.2:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.0.4.tgz#33168af4a21e99b00c5d41cbadb6a6cb49903a45"
 
 imurmurhash@^0.1.4:
   version "0.1.4"

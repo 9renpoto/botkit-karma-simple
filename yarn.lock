@@ -1519,9 +1519,9 @@ botkit-studio-sdk@^1.0.8:
     promise "^7.1.1"
     request "^2.67.0"
 
-botkit@0.6.21:
-  version "0.6.21"
-  resolved "https://registry.yarnpkg.com/botkit/-/botkit-0.6.21.tgz#0bf44792e2f1911e657fdfcbf13e529856face01"
+botkit@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/botkit/-/botkit-0.7.0.tgz#fb7dd9054337048f01f45a10a7ec2834d9edc256"
   dependencies:
     async "^2.6.1"
     back "^1.0.2"

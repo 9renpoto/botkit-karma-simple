@@ -1402,10 +1402,10 @@ botframework-schema@^4.4.0:
   resolved "https://registry.yarnpkg.com/botframework-schema/-/botframework-schema-4.4.0.tgz#83bc05221e50bb9f1d609ce52a8242becbecfb30"
   integrity sha512-3BWQEbArzHkw49BCdyNxqmSnLzkrL396Q0c+VcdabT3t75wV+dc4bwzSBuLfG0KW+fBjhSR4BXM8IQfnIZU0Vg==
 
-botkit@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/botkit/-/botkit-4.0.1.tgz#0975551e51c01b69ee6563dac8edbfd8ddb880bd"
-  integrity sha512-SM2Ga7mcSU3q/WP21xekGGq3t8fIIPtThab+n/uYNqi+zXwork+dmdnJQ1GPn2tK+nCzm60ZvpPFubq2jt4r1w==
+botkit@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/botkit/-/botkit-4.0.2.tgz#0c8b5cb09396cddc00be31dfe3b1331be76d2bd7"
+  integrity sha512-lmmbBi/wDT7nNIOKgLp9w1GTSt65y0f3EcsqItb4veJRtPUvxwjQiBlytzPUHpaLNJOX18fMxSXrAYc2cIuIZw==
   dependencies:
     body-parser "^1.18.3"
     botbuilder "^4.4.0"

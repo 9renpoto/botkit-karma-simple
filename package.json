@@ -7,8 +7,7 @@
     "url": "https://github.com/9renpoto/botkit-karma-simple/issues"
   },
   "dependencies": {
-    "karma-store-redis": "^0.3.0",
-    "snyk": "^1.161.1"
+    "karma-store-redis": "^0.3.0"
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "4.7.0",
@@ -65,10 +64,7 @@
     "lint:js": "eslint . --cache",
     "postpublish": "npm run deploy",
     "precommit": "lint-staged",
-    "prepublish": "npm run snyk-protect; npm run build",
     "start": "npm run build && node example/slack.js",
-    "test": "npm run lint && npm run build",
-    "snyk-protect": "snyk protect"
-  },
-  "snyk": true
+    "test": "npm run lint && npm run build"
+  }
 }

@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@9renpoto/eslint-config-flowtype@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-5.0.1.tgz#b13ca82df10f9fdb14228f8385fa7ab7e01fa7ad"
-  integrity sha512-atDSVd0y9/uY1AvHRQ7lmRkMFrtHB/b59Yepr+MBbhVbY2bR9Cj7A++yTd2Y9ot/mpkqACSrud/pgb4YAZBfpQ==
+"@9renpoto/eslint-config-flowtype@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-5.1.0.tgz#82ad8c0c822eaceeb56df39288a54960b9f60fb1"
+  integrity sha512-lzUK0XKK93jLP+T7UmBxLNRq3XwgtLz+DajdwEs759JQBecRCGeQS0IR7XpWlAM4ymdzR13bTuSsKMppLHu03w==
   dependencies:
-    "@9renpoto/eslint-config" "^5.0.1"
+    "@9renpoto/eslint-config" "^5.1.0"
     babel-eslint "10.0.3"
     eslint-plugin-flowtype "4.3.0"
 
-"@9renpoto/eslint-config@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-5.0.1.tgz#d8ce04ff78d43c8ab04bbac24421f1bba4516c42"
-  integrity sha512-itExTbJAJ2PklTRVfGzGVHdoqGSY4PMV8d1djX5htNtLqnHpOf2m3p9exCRIn4o7Hu6vYSdkmaNdYEhaegYqMA==
+"@9renpoto/eslint-config@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-5.1.0.tgz#84c51f3886f5a066185ab0617a6e5de0088c8f52"
+  integrity sha512-fc+pA9mreFEI7ImYsRqxwOe4T3hkiwpIsWCFp/GFIGwZr+i1buy+PUwH0npBaJbf5Jjrw39bzGkTAJ9cevEwng==
   dependencies:
     eslint-config-prettier "6.3.0"
     eslint-plugin-import "2.18.2"

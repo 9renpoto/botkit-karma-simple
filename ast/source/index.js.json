@@ -1110,7 +1110,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * @desc \n *  \n * @param \n * {string} data  \n * @param \n * {*} undefined  \n * @return \n * {string} \n"
+            "value": "*\n * @desc \n *  \n * @param \n * {string} data  \n * @param \n * {*} [length=2]  \n * @return \n * {string} \n"
           }
         ]
       },
@@ -2174,7 +2174,7 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * @desc \n *  \n * @param \n * {string} firstMsg  \n * @param \n * {array} data  \n * @return \n * {array} \n"
+            "value": "*\n * @desc \n *  \n * @param \n * {string} firstMsg  \n * @param \n * {string[]} data  \n * @return \n * {string[]} \n"
           }
         ]
       },
@@ -2849,7 +2849,13 @@
                     }
                   ],
                   "directives": []
-                }
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n * @param \n * {Controller} ctrl \n * @param \n * {string} [storeName=karmastore] \n"
+                  }
+                ]
               },
               {
                 "type": "ClassMethod",
@@ -6346,7 +6352,7 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n * @desc \n *  \n * @param \n * {*} undefined  \n * @return \n * {void} \n"
+                    "value": "*\n * @desc \n *  \n * @param \n * {number} [cnt=5]  \n * @return \n * {void} \n"
                   }
                 ]
               },
@@ -7276,7 +7282,7 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n * @desc \n *  \n * @param \n * {*} undefined  \n * @return \n * {void} \n"
+                    "value": "*\n * @desc \n *  \n * @param \n * {number} [cnt=5]  \n * @return \n * {void} \n"
                   }
                 ]
               },

@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@9renpoto/eslint-config-flowtype@5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-5.2.1.tgz#04a04aaa13f3b1803ad159b6543dd58bde23a2eb"
-  integrity sha512-jg24LgrG7w75pwVFbHsYGjRrTxHZDTw+cf6oHp1p0g4W2Abl4fTNTcvvtZZQycPMC0cIKE6oWCR98m8x3G7wTg==
+"@9renpoto/eslint-config-flowtype@5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config-flowtype/-/eslint-config-flowtype-5.3.0.tgz#cb23f27c1ebbd9c02121226ea95397c3c660e9be"
+  integrity sha512-4qKb5xEQU0O9DJPCalgJoPx3tqQCia9WkggDtrrZyy7ohmcN3V4PO4cCBOTZZQFYWBHqwXp5HHBS6as3vPgEQA==
   dependencies:
-    "@9renpoto/eslint-config" "^5.2.1"
+    "@9renpoto/eslint-config" "^5.3.0"
     babel-eslint "10.0.3"
     eslint-plugin-flowtype "4.3.0"
 
-"@9renpoto/eslint-config@^5.2.1":
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-5.2.1.tgz#78d3883c690808d5451edd359e4c495c93cb614f"
-  integrity sha512-LZXerCHA3RIDQkJTj/LwbuDumU0fmuEE82nwIVFQ4WKnzg2KxiAw3ggU7CtuZRTO+6gxmLvIko0g8WM75c4QOg==
+"@9renpoto/eslint-config@^5.3.0":
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/@9renpoto/eslint-config/-/eslint-config-5.3.0.tgz#3263709ba03b98f8feed6cda43e95d8928034d40"
+  integrity sha512-TSQfSUpC9hGYYJ/aiiCiTM3LiK9JrRbhXlM/QMBop8msEVeAtfnM+OxLSMVTdmEkjcnN9OO57KDpiD9oIJ3aow==
   dependencies:
-    eslint-config-prettier "6.4.0"
+    eslint-config-prettier "6.5.0"
     eslint-plugin-import "2.18.2"
     eslint-plugin-prettier "3.1.1"
 
@@ -2495,10 +2495,10 @@ esdoc@1.1.0:
     minimist "1.2.0"
     taffydb "2.7.3"
 
-eslint-config-prettier@6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.4.0.tgz#0a04f147e31d33c6c161b2dd0971418ac52d0477"
-  integrity sha512-YrKucoFdc7SEko5Sxe4r6ixqXPDP1tunGw91POeZTTRKItf/AMFYt/YLEQtZMkR2LVpAVhcAcZgcWpm1oGPW7w==
+eslint-config-prettier@6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.5.0.tgz#aaf9a495e2a816865e541bfdbb73a65cc162b3eb"
+  integrity sha512-cjXp8SbO9VFGW/Z7mbTydqS9to8Z58E5aYhj3e1+Hx7lS9s6gL5ILKNpCqZAFOVYRcSkWPFYljHrEh8QFEK5EQ==
   dependencies:
     get-stdin "^6.0.0"
 

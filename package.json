@@ -11,9 +11,9 @@
   },
   "devDependencies": {
     "@9renpoto/eslint-config-flowtype": "5.4.0",
-    "@babel/cli": "7.7.4",
-    "@babel/core": "7.7.4",
-    "@babel/preset-env": "7.7.4",
+    "@babel/cli": "7.7.5",
+    "@babel/core": "7.7.5",
+    "@babel/preset-env": "7.7.5",
     "@babel/preset-flow": "7.7.4",
     "@babel/register": "7.7.4",
     "botkit": "4.6.1",
